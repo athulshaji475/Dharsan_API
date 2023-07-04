@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Guruvayur_VisitModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Guruvayur_VisitEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="GetGate" ReturnType="Collection(Guruvayur_VisitModel.GetGate_Result)" />
+    <FunctionImport Name="GetInitSettings" ReturnType="Collection(Guruvayur_VisitModel.GetInitSettings_Result)" />
+    <FunctionImport Name="GetManagement" ReturnType="Collection(Guruvayur_VisitModel.GetManagement_Result)" />
+    <FunctionImport Name="GetTimeSloat" ReturnType="Collection(Guruvayur_VisitModel.GetTimeSloat_Result)" />
+    <FunctionImport Name="GetVisiter" ReturnType="Collection(Guruvayur_VisitModel.GetVisiter_Result)" />
+    <FunctionImport Name="GetViviterByLinkAddress" ReturnType="Collection(Guruvayur_VisitModel.GetViviterByLinkAddress_Result)">
+      <Parameter Name="linkid" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="InsertGate">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertManagement">
+      <Parameter Name="Phone" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Designation" Mode="In" Type="String" />
+      <Parameter Name="Dview" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertOtp" ReturnType="Collection(Guruvayur_VisitModel.InsertOtp_Result)">
+      <Parameter Name="Phone" Mode="In" Type="String" />
+      <Parameter Name="otp" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertTimeSloat">
+      <Parameter Name="Sloat" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertVisiter" ReturnType="Collection(Guruvayur_VisitModel.InsertVisiter_Result)">
+      <Parameter Name="MId" Mode="In" Type="Int32" />
+      <Parameter Name="TsId" Mode="In" Type="Int32" />
+      <Parameter Name="GId" Mode="In" Type="Int32" />
+      <Parameter Name="VisiterName" Mode="In" Type="String" />
+      <Parameter Name="VisiterMobile" Mode="In" Type="String" />
+      <Parameter Name="VisiterPlace" Mode="In" Type="String" />
+      <Parameter Name="Enterdon" Mode="In" Type="DateTime" />
+      <Parameter Name="PDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PrintedOn" Mode="In" Type="DateTime" />
+      <Parameter Name="Status" Mode="In" Type="Int32" />
+      <Parameter Name="EnterdBy" Mode="In" Type="Int32" />
+      <Parameter Name="NoOfP" Mode="In" Type="Int32" />
+      <Parameter Name="Remarks" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertVisiterByLink" ReturnType="Collection(Guruvayur_VisitModel.InsertVisiterByLink_Result)">
+      <Parameter Name="MId" Mode="In" Type="Int32" />
+      <Parameter Name="TsId" Mode="In" Type="Int32" />
+      <Parameter Name="GId" Mode="In" Type="Int32" />
+      <Parameter Name="VisiterName" Mode="In" Type="String" />
+      <Parameter Name="VisiterMobile" Mode="In" Type="String" />
+      <Parameter Name="VisiterPlace" Mode="In" Type="String" />
+      <Parameter Name="Enterdon" Mode="In" Type="DateTime" />
+      <Parameter Name="PDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PrintedOn" Mode="In" Type="DateTime" />
+      <Parameter Name="Status" Mode="In" Type="Int32" />
+      <Parameter Name="EnterdBy" Mode="In" Type="Int32" />
+      <Parameter Name="NoOfP" Mode="In" Type="Int32" />
+      <Parameter Name="Remarks" Mode="In" Type="String" />
+      <Parameter Name="Linkid" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="Update_Visiters_Status" ReturnType="Collection(Guruvayur_VisitModel.Update_Visiters_Status_Result)">
+      <Parameter Name="num" Mode="In" Type="Int32" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Update_Visiters_Status_delete" ReturnType="Collection(Guruvayur_VisitModel.Update_Visiters_Status_delete_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Update_Visiters_Status_Printed" ReturnType="Collection(Guruvayur_VisitModel.Update_Visiters_Status_Printed_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetViwersListForApprove_Individuals_ByLink" ReturnType="Collection(Guruvayur_VisitModel.GetViwersListForApprove_Individuals_ByLink_Result)">
+      <Parameter Name="Mid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Approved_ByStaff_ToAdmin" ReturnType="Collection(Guruvayur_VisitModel.Approved_ByStaff_ToAdmin_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateLinuser" ReturnType="Collection(Guruvayur_VisitModel.UpdateLinuser_Result)">
+      <Parameter Name="Sloatid" Mode="In" Type="Int32" />
+      <Parameter Name="VisiterName" Mode="In" Type="String" />
+      <Parameter Name="VisiterMobile" Mode="In" Type="String" />
+      <Parameter Name="VisiterPlace" Mode="In" Type="String" />
+      <Parameter Name="PDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PrintedOn" Mode="In" Type="DateTime" />
+      <Parameter Name="NoOfP" Mode="In" Type="Int32" />
+      <Parameter Name="Remarks" Mode="In" Type="String" />
+      <Parameter Name="Linkid" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="GetViwersListForApprove_Individuals" ReturnType="Collection(Guruvayur_VisitModel.GetViwersListForApprove_Individuals_Result)">
+      <Parameter Name="Mid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetViwersListForApprove" ReturnType="Collection(Guruvayur_VisitModel.GetViwersListForApprove_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CheckOtpFromOtp_Tb" ReturnType="Collection(Guruvayur_VisitModel.CheckOtpFromOtp_Tb_Result)">
+      <Parameter Name="otp" Mode="In" Type="String" />
+      <Parameter Name="Phone" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetManagementData" ReturnType="Collection(Guruvayur_VisitModel.GetManagementData_Result)">
+      <Parameter Name="phone" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetManagementTotalLimitsPerDay" ReturnType="Collection(Guruvayur_VisitModel.GetManagementTotalLimitsPerDay_Result)">
+      <Parameter Name="Mid" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetGate_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetInitSettings_Result">
+    <Property Type="Int32" Name="LimitNoOfPeople" Nullable="true" />
+    <Property Type="Int32" Name="Id" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetManagement_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Dview" Nullable="true" />
+    <Property Type="String" Name="Designation" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="GetTimeSloat_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="sloat" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetVisiter_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Mid" Nullable="true" />
+    <Property Type="Int32" Name="TsId" Nullable="true" />
+    <Property Type="Int32" Name="GId" Nullable="true" />
+    <Property Type="String" Name="VisiterName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VisiterMobile" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VisiterPlace" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PrintedOn" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Int32" Name="EnterdBy" Nullable="true" />
+    <Property Type="DateTime" Name="Systemdate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Enterdon" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetViviterByLinkAddress_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Mid" Nullable="true" />
+    <Property Type="Int32" Name="Tsid" Nullable="true" />
+    <Property Type="String" Name="Gate" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Gid" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="String" Name="VisiterName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VisiterPlace" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VisiterMobile" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PDate" Nullable="true" />
+    <Property Type="String" Name="LinkId" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="InsertOtp_Result">
+    <Property Type="Int32" Name="Id" Nullable="true" />
+    <Property Type="Int32" Name="Error" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="InsertVisiter_Result">
+    <Property Type="Int32" Name="Id" Nullable="true" />
+    <Property Type="Int32" Name="Error" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="InsertVisiterByLink_Result">
+    <Property Type="Int32" Name="Id" Nullable="true" />
+    <Property Type="Int32" Name="Error" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Update_Visiters_Status_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Update_Visiters_Status_delete_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Int32" Name="aserror" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Update_Visiters_Status_Printed_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Int32" Name="aserror" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetViwersListForApprove_Individuals_ByLink_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Mid" Nullable="true" />
+    <Property Type="String" Name="Staff" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PDate" Nullable="true" />
+    <Property Type="Int32" Name="NoOfPeoples" Nullable="true" />
+    <Property Type="String" Name="TimeSloat" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="TsId" Nullable="true" />
+    <Property Type="Int32" Name="GId" Nullable="true" />
+    <Property Type="String" Name="VisiterName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VisiterMobile" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VisiterPlace" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PrintedOn" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Int32" Name="EnterdBy" Nullable="true" />
+    <Property Type="DateTime" Name="Systemdate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Enterdon" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Approved_ByStaff_ToAdmin_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Int32" Name="error" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="UpdateLinuser_Result">
+    <Property Type="String" Name="Linkid" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="error" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetViwersListForApprove_Individuals_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Mid" Nullable="true" />
+    <Property Type="String" Name="Staff" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PDate" Nullable="true" />
+    <Property Type="Int32" Name="NoOfPeoples" Nullable="true" />
+    <Property Type="String" Name="TimeSloat" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="TsId" Nullable="true" />
+    <Property Type="Int32" Name="GId" Nullable="true" />
+    <Property Type="String" Name="VisiterName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VisiterMobile" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VisiterPlace" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PrintedOn" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Int32" Name="EnterdBy" Nullable="true" />
+    <Property Type="DateTime" Name="Systemdate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Enterdon" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetViwersListForApprove_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Mid" Nullable="true" />
+    <Property Type="String" Name="Staff" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PDate" Nullable="true" />
+    <Property Type="Int32" Name="NoOfPeoples" Nullable="true" />
+    <Property Type="String" Name="TimeSloat" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="TsId" Nullable="true" />
+    <Property Type="Int32" Name="GId" Nullable="true" />
+    <Property Type="String" Name="VisiterName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VisiterMobile" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VisiterPlace" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="PrintedOn" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Int32" Name="EnterdBy" Nullable="true" />
+    <Property Type="DateTime" Name="Systemdate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Enterdon" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CheckOtpFromOtp_Tb_Result">
+    <Property Type="String" Name="otp" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetManagementData_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Designation" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Dview" Nullable="true" />
+    <Property Type="Int32" Name="TotalLimitPerDay" Nullable="true" />
+    <Property Type="Int32" Name="OneVisitLimit" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetManagementTotalLimitsPerDay_Result">
+    <Property Type="Int32" Name="CovisitersSum" Nullable="true" />
+    <Property Type="Int32" Name="VisitersCont" Nullable="true" />
+    <Property Type="Int32" Name="Totalvisiter" Nullable="true" />
+  </ComplexType>
+</Schema>

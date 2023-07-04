@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Guruvayur_VisitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="Approved_ByStaff_ToAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CheckOtpFromOtp_Tb" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="otp" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetGate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetInitSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetManagement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetManagementData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="phone" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetManagementTotalLimitsPerDay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Mid" Type="int" Mode="In" />
+    <Parameter Name="Date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="GetTimeSloat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetVisiter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetViviterByLinkAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="linkid" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="GetViwersListForApprove" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetViwersListForApprove_Individuals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Mid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetViwersListForApprove_Individuals_ByLink" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Mid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertGate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertManagement" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Phone" Type="nvarchar" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Designation" Type="nvarchar" Mode="In" />
+    <Parameter Name="Dview" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertOtp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Phone" Type="nvarchar" Mode="In" />
+    <Parameter Name="otp" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertTimeSloat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Sloat" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertVisiter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MId" Type="int" Mode="In" />
+    <Parameter Name="TsId" Type="int" Mode="In" />
+    <Parameter Name="GId" Type="int" Mode="In" />
+    <Parameter Name="VisiterName" Type="nvarchar" Mode="In" />
+    <Parameter Name="VisiterMobile" Type="nvarchar" Mode="In" />
+    <Parameter Name="VisiterPlace" Type="nvarchar" Mode="In" />
+    <Parameter Name="Enterdon" Type="date" Mode="In" />
+    <Parameter Name="PDate" Type="date" Mode="In" />
+    <Parameter Name="PrintedOn" Type="date" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+    <Parameter Name="EnterdBy" Type="int" Mode="In" />
+    <Parameter Name="NoOfP" Type="int" Mode="In" />
+    <Parameter Name="Remarks" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertVisiterByLink" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MId" Type="int" Mode="In" />
+    <Parameter Name="TsId" Type="int" Mode="In" />
+    <Parameter Name="GId" Type="int" Mode="In" />
+    <Parameter Name="VisiterName" Type="nvarchar" Mode="In" />
+    <Parameter Name="VisiterMobile" Type="nvarchar" Mode="In" />
+    <Parameter Name="VisiterPlace" Type="nvarchar" Mode="In" />
+    <Parameter Name="Enterdon" Type="date" Mode="In" />
+    <Parameter Name="PDate" Type="date" Mode="In" />
+    <Parameter Name="PrintedOn" Type="date" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+    <Parameter Name="EnterdBy" Type="int" Mode="In" />
+    <Parameter Name="NoOfP" Type="int" Mode="In" />
+    <Parameter Name="Remarks" Type="nvarchar" Mode="In" />
+    <Parameter Name="Linkid" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="Update_Visiters_Status" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="num" Type="int" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Update_Visiters_Status_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Update_Visiters_Status_Printed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateLinuser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Sloatid" Type="int" Mode="In" />
+    <Parameter Name="VisiterName" Type="nvarchar" Mode="In" />
+    <Parameter Name="VisiterMobile" Type="nvarchar" Mode="In" />
+    <Parameter Name="VisiterPlace" Type="nvarchar" Mode="In" />
+    <Parameter Name="PDate" Type="date" Mode="In" />
+    <Parameter Name="PrintedOn" Type="date" Mode="In" />
+    <Parameter Name="NoOfP" Type="int" Mode="In" />
+    <Parameter Name="Remarks" Type="nvarchar" Mode="In" />
+    <Parameter Name="Linkid" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <EntityContainer Name="Guruvayur_VisitModelStoreContainer" />
+</Schema>

@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Guruvayur_VisitModelStoreContainer" CdmEntityContainer="Guruvayur_VisitEntities">
+    <FunctionImportMapping FunctionImportName="GetGate" FunctionName="Guruvayur_VisitModel.Store.GetGate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.GetGate_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetInitSettings" FunctionName="Guruvayur_VisitModel.Store.GetInitSettings">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.GetInitSettings_Result">
+          <ScalarProperty Name="LimitNoOfPeople" ColumnName="LimitNoOfPeople" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetManagement" FunctionName="Guruvayur_VisitModel.Store.GetManagement">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.GetManagement_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Dview" ColumnName="Dview" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetTimeSloat" FunctionName="Guruvayur_VisitModel.Store.GetTimeSloat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.GetTimeSloat_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="sloat" ColumnName="sloat" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetVisiter" FunctionName="Guruvayur_VisitModel.Store.GetVisiter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.GetVisiter_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Mid" ColumnName="Mid" />
+          <ScalarProperty Name="TsId" ColumnName="TsId" />
+          <ScalarProperty Name="GId" ColumnName="GId" />
+          <ScalarProperty Name="VisiterName" ColumnName="VisiterName" />
+          <ScalarProperty Name="VisiterMobile" ColumnName="VisiterMobile" />
+          <ScalarProperty Name="VisiterPlace" ColumnName="VisiterPlace" />
+          <ScalarProperty Name="PrintedOn" ColumnName="PrintedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EnterdBy" ColumnName="EnterdBy" />
+          <ScalarProperty Name="Systemdate" ColumnName="Systemdate" />
+          <ScalarProperty Name="Enterdon" ColumnName="Enterdon" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetViviterByLinkAddress" FunctionName="Guruvayur_VisitModel.Store.GetViviterByLinkAddress">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.GetViviterByLinkAddress_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Mid" ColumnName="Mid" />
+          <ScalarProperty Name="Tsid" ColumnName="Tsid" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="Gid" ColumnName="Gid" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="VisiterName" ColumnName="VisiterName" />
+          <ScalarProperty Name="VisiterPlace" ColumnName="VisiterPlace" />
+          <ScalarProperty Name="VisiterMobile" ColumnName="VisiterMobile" />
+          <ScalarProperty Name="PDate" ColumnName="PDate" />
+          <ScalarProperty Name="LinkId" ColumnName="LinkId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertGate" FunctionName="Guruvayur_VisitModel.Store.InsertGate" />
+    <FunctionImportMapping FunctionImportName="InsertManagement" FunctionName="Guruvayur_VisitModel.Store.InsertManagement" />
+    <FunctionImportMapping FunctionImportName="InsertOtp" FunctionName="Guruvayur_VisitModel.Store.InsertOtp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.InsertOtp_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertTimeSloat" FunctionName="Guruvayur_VisitModel.Store.InsertTimeSloat" />
+    <FunctionImportMapping FunctionImportName="InsertVisiter" FunctionName="Guruvayur_VisitModel.Store.InsertVisiter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.InsertVisiter_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertVisiterByLink" FunctionName="Guruvayur_VisitModel.Store.InsertVisiterByLink">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.InsertVisiterByLink_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Update_Visiters_Status" FunctionName="Guruvayur_VisitModel.Store.Update_Visiters_Status">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.Update_Visiters_Status_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Update_Visiters_Status_delete" FunctionName="Guruvayur_VisitModel.Store.Update_Visiters_Status_delete">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.Update_Visiters_Status_delete_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="aserror" ColumnName="aserror" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Update_Visiters_Status_Printed" FunctionName="Guruvayur_VisitModel.Store.Update_Visiters_Status_Printed">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.Update_Visiters_Status_Printed_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="aserror" ColumnName="aserror" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetViwersListForApprove_Individuals_ByLink" FunctionName="Guruvayur_VisitModel.Store.GetViwersListForApprove_Individuals_ByLink">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.GetViwersListForApprove_Individuals_ByLink_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Mid" ColumnName="Mid" />
+          <ScalarProperty Name="Staff" ColumnName="Staff" />
+          <ScalarProperty Name="PDate" ColumnName="PDate" />
+          <ScalarProperty Name="NoOfPeoples" ColumnName="NoOfPeoples" />
+          <ScalarProperty Name="TimeSloat" ColumnName="TimeSloat" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TsId" ColumnName="TsId" />
+          <ScalarProperty Name="GId" ColumnName="GId" />
+          <ScalarProperty Name="VisiterName" ColumnName="VisiterName" />
+          <ScalarProperty Name="VisiterMobile" ColumnName="VisiterMobile" />
+          <ScalarProperty Name="VisiterPlace" ColumnName="VisiterPlace" />
+          <ScalarProperty Name="PrintedOn" ColumnName="PrintedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EnterdBy" ColumnName="EnterdBy" />
+          <ScalarProperty Name="Systemdate" ColumnName="Systemdate" />
+          <ScalarProperty Name="Enterdon" ColumnName="Enterdon" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Approved_ByStaff_ToAdmin" FunctionName="Guruvayur_VisitModel.Store.Approved_ByStaff_ToAdmin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.Approved_ByStaff_ToAdmin_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="error" ColumnName="error" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateLinuser" FunctionName="Guruvayur_VisitModel.Store.UpdateLinuser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.UpdateLinuser_Result">
+          <ScalarProperty Name="Linkid" ColumnName="Linkid" />
+          <ScalarProperty Name="error" ColumnName="error" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetViwersListForApprove_Individuals" FunctionName="Guruvayur_VisitModel.Store.GetViwersListForApprove_Individuals">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.GetViwersListForApprove_Individuals_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Mid" ColumnName="Mid" />
+          <ScalarProperty Name="Staff" ColumnName="Staff" />
+          <ScalarProperty Name="PDate" ColumnName="PDate" />
+          <ScalarProperty Name="NoOfPeoples" ColumnName="NoOfPeoples" />
+          <ScalarProperty Name="TimeSloat" ColumnName="TimeSloat" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TsId" ColumnName="TsId" />
+          <ScalarProperty Name="GId" ColumnName="GId" />
+          <ScalarProperty Name="VisiterName" ColumnName="VisiterName" />
+          <ScalarProperty Name="VisiterMobile" ColumnName="VisiterMobile" />
+          <ScalarProperty Name="VisiterPlace" ColumnName="VisiterPlace" />
+          <ScalarProperty Name="PrintedOn" ColumnName="PrintedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EnterdBy" ColumnName="EnterdBy" />
+          <ScalarProperty Name="Systemdate" ColumnName="Systemdate" />
+          <ScalarProperty Name="Enterdon" ColumnName="Enterdon" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetViwersListForApprove" FunctionName="Guruvayur_VisitModel.Store.GetViwersListForApprove">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.GetViwersListForApprove_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Mid" ColumnName="Mid" />
+          <ScalarProperty Name="Staff" ColumnName="Staff" />
+          <ScalarProperty Name="PDate" ColumnName="PDate" />
+          <ScalarProperty Name="NoOfPeoples" ColumnName="NoOfPeoples" />
+          <ScalarProperty Name="TimeSloat" ColumnName="TimeSloat" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TsId" ColumnName="TsId" />
+          <ScalarProperty Name="GId" ColumnName="GId" />
+          <ScalarProperty Name="VisiterName" ColumnName="VisiterName" />
+          <ScalarProperty Name="VisiterMobile" ColumnName="VisiterMobile" />
+          <ScalarProperty Name="VisiterPlace" ColumnName="VisiterPlace" />
+          <ScalarProperty Name="PrintedOn" ColumnName="PrintedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EnterdBy" ColumnName="EnterdBy" />
+          <ScalarProperty Name="Systemdate" ColumnName="Systemdate" />
+          <ScalarProperty Name="Enterdon" ColumnName="Enterdon" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CheckOtpFromOtp_Tb" FunctionName="Guruvayur_VisitModel.Store.CheckOtpFromOtp_Tb">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.CheckOtpFromOtp_Tb_Result">
+          <ScalarProperty Name="otp" ColumnName="otp" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetManagementData" FunctionName="Guruvayur_VisitModel.Store.GetManagementData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.GetManagementData_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Dview" ColumnName="Dview" />
+          <ScalarProperty Name="TotalLimitPerDay" ColumnName="TotalLimitPerDay" />
+          <ScalarProperty Name="OneVisitLimit" ColumnName="OneVisitLimit" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetManagementTotalLimitsPerDay" FunctionName="Guruvayur_VisitModel.Store.GetManagementTotalLimitsPerDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Guruvayur_VisitModel.GetManagementTotalLimitsPerDay_Result">
+          <ScalarProperty Name="CovisitersSum" ColumnName="CovisitersSum" />
+          <ScalarProperty Name="VisitersCont" ColumnName="VisitersCont" />
+          <ScalarProperty Name="Totalvisiter" ColumnName="Totalvisiter" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
